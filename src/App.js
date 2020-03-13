@@ -1,26 +1,55 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from '@material-ui/core/Container'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
-function App() {
+import Footer from './components/Footer'
+import Main from './components/Main'
+import Header from './components/Header'
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Rubik, sans-serif'
+  },
+  overrides: {
+    MuiInput: {
+      underline: {
+        "&&&&:hover:before": {
+          borderBottom: "1px solid black"
+        },
+        "&:after": {
+          borderBottom: '1px solid black',
+          transform: 'none',
+          transition: 'none'
+        }
+      }
+    },
+    MuiTabs: {
+      indicator: {
+        backgroundColor: 'red'
+      }
+    },
+    MuiTab: {
+      textColorSecondary: {
+        textTransform: 'capitalize',
+        fontWeight: 'bold',
+        fontSize: '24px',
+        color: '#000',
+      },
+    }
+  }
+    
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <MuiThemeProvider theme={theme}>
+      <Container maxWidth="lg">
+        <Header />
+        <Main />
+        <Footer />
+      </Container>
+    </MuiThemeProvider>
+  )
 }
 
 export default App;
