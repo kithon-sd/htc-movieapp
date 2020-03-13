@@ -39,7 +39,7 @@ const TvSchedule = () => {
         spacing={2}
         >
             <Grid
-            component={SimpleBar}
+            component={Scrollbars}
             direction="column"
             container
             alignItems="center"
