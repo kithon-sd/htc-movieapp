@@ -5,6 +5,7 @@ const useStyles = makeStyles({
     container: {
         backgroundColor: '#f2f2f2',
         display: 'flex',
+        margin: '10px 0',
         justifyContent: 'flex-start',
         '@media (max-width: 1024px)': {
             flexDirection: 'column'

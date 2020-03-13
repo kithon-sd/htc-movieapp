@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { MuiThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles'
 
 import Footer from './components/Footer'
 import Main from './components/Main'
@@ -40,17 +40,33 @@ const theme = createMuiTheme({
     
 });
 
+const useStyles = makeStyles({
+  footerContainer: {
+    width: '100%',
+    backgroundColor: '#f2f2f2'
+  },
+  wrap: {
+    display: 'flex',
+    height: '100vh',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+  }
+})
+
 const App = () => {
+  const classes = useStyles()
   return (
     <MuiThemeProvider theme={theme}>
+      <div className={classes.wrap}>
       <Container maxWidth="lg">
         <Header />
         <Main />
       </Container>
-      <div style={{width: '100%', backgroundColor: '#f2f2f2', marginBottom: '0px'}}>
+      <div className={classes.footerContainer}>
         <Container maxWidth="lg">
           <Footer />
         </Container>
+      </div>
       </div>
     </MuiThemeProvider>
   )

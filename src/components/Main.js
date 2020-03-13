@@ -41,7 +41,6 @@ const Main = () => {
       <TabPanel value={value} index={0}>
         <h2 className={classes.heading}><span role="img" aria-label="emoji">🔥</span> Новинки </h2>
          <MovieList />
-        <h2 className={classes.heading}>Жанры</h2>
          <GenreList /> 
       </TabPanel>
       <TabPanel value={value} index={1}>

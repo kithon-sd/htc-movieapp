@@ -10,7 +10,7 @@ import TvCard from './TvCard'
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
-        height: 600,
+        height: 650,
         width: 1200,
         overflowY: 'hidden',
         overflowX: 'hidden',
