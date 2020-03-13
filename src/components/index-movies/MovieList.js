@@ -7,9 +7,9 @@ import { movies } from '../../data/movies'
 const MovieList = () => {
     return (
         <Grid justify="space-between" container spacing={2}>
-            <Grid container justify="space-between" spacing={2}>
+            <Grid container justify="center" spacing={2}>
                 {movies.map(movie => (
-                    <Grid key={movie.title} item>
+                    <Grid key={movie.title} style={{padding: '0 10px'}} item>
                         <MovieCard movie={movie} />
                     </Grid>
                 ))}

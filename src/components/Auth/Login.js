@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Modal, Button, Input } from '@material-ui/core'
+import Checkbox from '../checkbox/Checkbox'
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -84,6 +85,7 @@ const Login = ({ handleLogin }) => {
                         <div>
                                 <Input className={classes.input} onChange={(e) => setName(e.target.value)} value={name} placeholder='Логин' />
                                 <Input className={classes.input} placeholder='Пароль' />
+                                <Checkbox />
                         </div>
                     <Button type='submit' className={classes.loginButton}>Войти</Button>
                     </form>

@@ -46,8 +46,12 @@ const App = () => {
       <Container maxWidth="lg">
         <Header />
         <Main />
-        <Footer />
       </Container>
+      <div style={{width: '100%', backgroundColor: '#f2f2f2', marginBottom: '0px'}}>
+        <Container maxWidth="lg">
+          <Footer />
+        </Container>
+      </div>
     </MuiThemeProvider>
   )
 }

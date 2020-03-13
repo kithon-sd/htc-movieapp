@@ -68,7 +68,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Видеосервис
           </Typography>
-          <Typography className={classes.title}>
+          <Typography component="div" className={classes.title}>
             <Input className={classes.search} placeholder="Поиск..." />
             <Button className={classes.searchButton}>Найти</Button>
           </Typography>

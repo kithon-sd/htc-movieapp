@@ -7,9 +7,9 @@ import GenreCard from './GenreCard'
 const GenreList = () => {
     return (
         <Grid justify="space-between" container spacing={2}>
-            <Grid container justify="space-between" spacing={2}>
+            <Grid container justify="center" spacing={2}>
                 {genres.map(genre => (
-                    <Grid key={genre.title} item>
+                    <Grid key={genre.title} style={{padding: '0 10px'}}item>
                         <GenreCard genre={genre} />
                     </Grid>
                 ))}
