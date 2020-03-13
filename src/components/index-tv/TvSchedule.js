@@ -12,7 +12,7 @@ const useStyles = makeStyles({
         flexGrow: 1,
         height: 600,
         width: 1200,
-        overflowY: 'scroll',
+        overflowY: 'hidden',
         overflowX: 'hidden',
         '@media (max-width: 1024px)': {
             width: '100%'
